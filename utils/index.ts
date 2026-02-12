@@ -12,11 +12,14 @@ import Kai from '../public/Assets/Images/Kai_image.png'
 import Anna from '../public/Assets/Images/Anna_image.png'
 import Oliver from '../public/Assets/Images/Oliver_image.png'
 import Tony from '../public/Assets/Images/Tony_image.png'
-
+import Always_on from '../public/Assets/Images/H3 [flex].png'
+import Scalable from '../public/Assets/Images/H3 [flex] (1).png'
+import Secure from '../public/Assets/Images/H3 [flex] (2).png'
+import Intelligent from '../public/Assets/Images/H3 [flex] (3).png'
 
 
 
 
 export const images = {
-    icon, home_bg, send_icon, home_CTA, home_CTA2, ScrollLogo1, ScrollLogo2, ScrollLogo3, ScrollLogo4, Alex, Kai, Anna, Oliver, Tony
+    icon, home_bg, send_icon, home_CTA, home_CTA2, ScrollLogo1, ScrollLogo2, ScrollLogo3, ScrollLogo4, Alex, Kai, Anna, Oliver, Tony, Always_on, Scalable, Secure, Intelligent
 }
