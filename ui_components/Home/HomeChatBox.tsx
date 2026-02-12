@@ -7,9 +7,9 @@ export default function ChatInput() {
       <div
         className="
           flex items-center
-          w-[608px] h-[120px]
+          w-152 h-30
           px-6
-          rounded-[12px]
+          rounded-xl
 
           bg-black/40
           border border-white/20
@@ -42,7 +42,7 @@ export default function ChatInput() {
             flex items-center justify-center
             rounded-lg
 
-            bg-gradient-to-r
+            bg-linear-to-r
             from-btn-bg
             via-btn-bg2
             to-btn-bg3

@@ -13,7 +13,7 @@ const HomeCTA = () => {
       <div className="flex gap-6">
         
         {/* Card 1 */}
-        <div className="relative w-[320px] h-[90px] rounded-xl overflow-hidden">
+        <div className="relative w-[320px] h-22.5 rounded-xl overflow-hidden">
           <Image
             src={images.home_CTA}
             alt="EC2 Usage Pattern Analysis"
@@ -23,7 +23,7 @@ const HomeCTA = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="relative w-[320px] h-[90px] rounded-xl overflow-hidden">
+        <div className="relative w-[320px] h-22.5 rounded-xl overflow-hidden">
           <Image
             src={images.home_CTA2}
             alt="Reserved Instance Opportunities"

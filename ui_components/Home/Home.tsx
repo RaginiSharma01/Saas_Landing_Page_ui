@@ -9,7 +9,7 @@ export default function Home() {
     <main className="bg-black min-h-screen px-20 py-2">
       
       {/* Hero section */}
-      <section className="relative w-full h-[720px] overflow-hidden rounded-xl">
+      <section className="relative w-full h-180 overflow-hidden rounded-xl">
         <Image
           src={images.home_bg}
           alt="Background"
@@ -26,8 +26,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Rest of page */}
-      <section className="h-[800px] bg-black" />
+ 
     </main>
   );
 }
