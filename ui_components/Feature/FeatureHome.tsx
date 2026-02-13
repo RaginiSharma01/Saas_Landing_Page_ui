@@ -5,7 +5,7 @@ export default function FeatureHome() {
   const features = ["Always-on", "Scalable", "Secure", "Intelligent"];
 
   return (
-    <section className="w-full bg-black py-16 flex flex-col items-center gap-10">
+    <section className="w-full bg-black pt-16 flex flex-col items-center gap-10">
       
      
       <div className="flex gap-3 flex-wrap justify-center">

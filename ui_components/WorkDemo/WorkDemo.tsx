@@ -1,15 +1,16 @@
 import Image from "next/image";
 import { images } from "@/utils/index";
+import WorkDemoFooter from "./WorkDemoFooter";
 
 export default function WorkDemo() {
   return (
     
     <div className="bg-black text-white">
-<div className="text-white justify-center text-center text-3xl font-semibold mb-4">
+<div className="text-white justify-center text-center text-3xl font-semibold ">
     <h1>How CloudThinker Works</h1>
 </div>
      
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-10 overflow-hidden">
         
         <div
           className="absolute inset-0 pointer-events-none"
@@ -110,7 +111,7 @@ export default function WorkDemo() {
           </div>
         </div>
       </section>
-
+      <WorkDemoFooter/>
     </div>
   );
 }

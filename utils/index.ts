@@ -24,7 +24,19 @@ import divider from '../public/Assets/Images/Div [mx-auto].png'
 import demo_image from '../public/Assets/Images/Image [object-cover].png'
 import demo_image2 from '../public/Assets/Images/Image [object-cover] (1).png'
 import demo_image3 from '../public/Assets/Images/Image [object-cover] (2).png'
-
+import demo_icon from '../public/Assets/Images/Icon (1).png'
+import demo_icon2 from '../public/Assets/Images/Icon (2).png'
+import demo_icon3 from '../public/Assets/Images/Icon (3).png'
+import demo_icon4 from '../public/Assets/Images/Icon (4).png'
+import i_icon from '../public/Assets/Images/i.png'
+import i2_icon from '../public/Assets/Images/i2.png'
+import i3_icon from '../public/Assets/Images/i3.png'
+import i4_icon from '../public/Assets/Images/i4.png'
+import bg_card from '../public/Assets/Images/Div [bg-card].png'
+import bg2_card from '../public/Assets/Images/Div [bg-card] (1).png'
+import bg3_card from '../public/Assets/Images/Div [bg-card] (2).png'
+import Footer from '../public/Assets/Images/footer_bg.png'
+import Footer_icon from '../public/Assets/Images/Footer_icon.png'
 export const images = {
     icon, 
     home_bg, 
@@ -40,4 +52,8 @@ export const images = {
     ISO, Aicpa, Gdpr, Hipaa,
     divider,
     demo_image, demo_image2, demo_image3,
+    demo_icon, demo_icon2, demo_icon3, demo_icon4,
+    i_icon, i2_icon, i3_icon, i4_icon,
+    bg_card, bg2_card, bg3_card,
+    Footer, Footer_icon
 }

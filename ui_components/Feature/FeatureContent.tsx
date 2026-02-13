@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function FeatureContent() {
   return (
-    <div className="relative bg-black text-center py-20 overflow-hidden">
+    <div className="relative bg-black text-center pt-20 overflow-hidden">
       <h1 className="text-4xl font-semibold mb-4 text-white">
         Enterprise Security
       </h1>

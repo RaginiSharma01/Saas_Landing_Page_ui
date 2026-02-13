@@ -18,8 +18,8 @@ export default function FeatureBanner() {
             key={index}
             className="
               relative
-              w-[210px]
-              h-[250px]
+              w-52.5
+              h-62.5
               rounded-3xl
               overflow-hidden
               transition
