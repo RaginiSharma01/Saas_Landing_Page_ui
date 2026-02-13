@@ -37,6 +37,10 @@ import bg2_card from '../public/Assets/Images/Div [bg-card] (1).png'
 import bg3_card from '../public/Assets/Images/Div [bg-card] (2).png'
 import Footer from '../public/Assets/Images/footer_bg.png'
 import Footer_icon from '../public/Assets/Images/Footer_icon.png'
+import Map_icon from '../public/Assets/Images/map_icon.png'
+
+
+
 export const images = {
     icon, 
     home_bg, 
@@ -55,5 +59,5 @@ export const images = {
     demo_icon, demo_icon2, demo_icon3, demo_icon4,
     i_icon, i2_icon, i3_icon, i4_icon,
     bg_card, bg2_card, bg3_card,
-    Footer, Footer_icon
+    Footer, Footer_icon, Map_icon
 }

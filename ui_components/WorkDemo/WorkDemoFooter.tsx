@@ -45,7 +45,7 @@ export default function WorkDemoFooter() {
     {cards.map((card, index) => (
       <div
         key={index}
-        className="relative rounded-xl border border-gray-800 bg-linear-to-b from-[#0b0f0a] to-black p-6 text-center hover:border-green-500 transition"
+        className="relative rounded-xl border border-gray-800 bg-linear-to-b from-[#0b0f0a] to-black p-6 text-center hover:border-gray-800 transition"
       >
         <div className="flex justify-center mb-4">
           <Image src={card.icon} alt={card.title} width={40} height={40} />
