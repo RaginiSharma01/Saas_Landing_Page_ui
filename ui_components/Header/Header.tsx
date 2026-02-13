@@ -4,7 +4,7 @@ import { images } from "@/utils/index";
 
 export default function Header() {
   return (
-    <header className="w-full bg-black border-b border-gray-800">
+    <header className="w-full bg-black border-b border-gray-800 fixed z-20">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Image
@@ -26,7 +26,7 @@ export default function Header() {
           <Link href="#" className="hover:text-white">Services</Link>
         </nav>
 
-       {/* btn */}
+      
         <div className="flex items-center gap-4">
           <Link
             href="#"
