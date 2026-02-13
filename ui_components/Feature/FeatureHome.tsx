@@ -1,4 +1,5 @@
 import FeatureBanner from "./FeatureBanner";
+import FeatureContent from "./FeatureContent";
 
 export default function FeatureHome() {
   const features = ["Always-on", "Scalable", "Secure", "Intelligent"];
@@ -26,13 +27,16 @@ export default function FeatureHome() {
       </div>
 
       
-      <h1 className="text-white text-4xl font-semibold text-center">
-        Meet Your Dream Team
-      </h1>
-      <h4 className="text-gray-400 text-md text-center max-w-xl">
-        Supercharge your cloud operations with our AI Specialists.
-      </h4>
+    <h1 className="text-white text-5xl font-semibold text-center">
+  Meet Your Dream Team
+</h1>
+
+<h4 className="text-gray-400 text-lg text-center max-w-xl">
+  Supercharge your cloud operations with our AI Specialists.
+</h4>
+
       <FeatureBanner/>
+      <FeatureContent/>
     </section>
     
   );

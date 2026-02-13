@@ -11,20 +11,21 @@ export default function FeatureBanner() {
   ];
 
   return (
-    <section className="w-full bg-black py-12 flex justify-center">
-      <div className="flex gap-6 flex-wrap justify-center">
+    <div className="w-full flex justify-center mt-6">
+      <div className="max-w-6xl w-full flex justify-center gap-10">
         {team.map((member, index) => (
           <div
             key={index}
             className="
               relative
-              w-[180px]
-              h-[220px]
-              rounded-xl
+              w-[210px]
+              h-[250px]
+              rounded-3xl
               overflow-hidden
-              bg-neutral-900
-              hover:scale-105
               transition
+              duration-300
+              hover:-translate-y-2
+              hover:scale-105
             "
           >
             <Image
@@ -36,6 +37,6 @@ export default function FeatureBanner() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
