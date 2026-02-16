@@ -27,11 +27,21 @@ export default function FeatureHome() {
       </div>
 
       
-    <h1 className="text-white text-5xl font-semibold text-center">
+    <h1 className=" text-white
+        text-2xl
+        sm:text-3xl
+        md:text-5xl
+        lg:text-6xl
+        font-bold ">
   Meet Your Dream Team
 </h1>
 
-<h4 className="text-gray-400 text-lg text-center max-w-xl">
+<h4 className=" text-text-primary-100
+        max-w-md
+        md:max-w-2xl
+        text-center
+        text-sm
+        md:text-lg">
   Supercharge your cloud operations with our AI Specialists.
 </h4>
 

@@ -28,9 +28,9 @@ export default function WorkDemoFooter() {
   return (
     
 
-<section className="bg-black text-white py-20 ">
+<section className="bg-black text-white py-18 ">
   {/* Header */}
-  <div className="text-center max-w-2xl mx-auto mb-12">
+  <div className="text-center max-w-2xl mx-auto mb-12 p-2">
     <h2 className="text-3xl font-semibold mb-3">
       Built for Modern Cloud Teams
     </h2>
@@ -41,7 +41,7 @@ export default function WorkDemoFooter() {
   </div>
 
   {/* Cards */}
-  <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
     {cards.map((card, index) => (
       <div
         key={index}

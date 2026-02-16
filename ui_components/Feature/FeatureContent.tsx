@@ -5,11 +5,16 @@ import Link from "next/link";
 export default function FeatureContent() {
   return (
     <div className="relative bg-black text-center pt-20 overflow-hidden">
-      <h1 className="text-4xl font-semibold mb-4 text-white">
+      <h1 className=" text-white
+        text-2xl
+        sm:text-3xl
+        md:text-5xl
+        lg:text-6xl
+        font-bold mb-4">
         Enterprise Security
       </h1>
 
-      <p className="max-w-2xl mx-auto text-gray-400 mb-10">
+      <p className="max-w-2xl mx-auto text-text-primary-100 text-sm mb-10">
         Our team delivers cutting-edge cloud solutions backed by
         Langfuse&apos;s industry-leading enterprise security, ensuring your
         data is protected with state-of-the-art encryption, monitoring, and

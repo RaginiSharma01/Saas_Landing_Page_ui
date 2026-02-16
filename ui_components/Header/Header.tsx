@@ -5,12 +5,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { images } from "@/utils/index";
+import OnboardingModal from "@/shared/OnboardingModal";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full bg-black border-b border-gray-800 fixed z-20">
+    <header className="w-full bg-black border-b border-gray-800 fixed z-30">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Logo */}
@@ -35,54 +36,82 @@ export default function Header() {
 
         {/* Desktop buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <Link
-            href="#"
-            className="w-20 h-9 flex items-center justify-center rounded-xl text-white text-sm font-medium hover:opacity-90 transition"
-          >
-            Log in
-          </Link>
+          
+          {/* Login modal */}
+          <OnboardingModal
+            trigger={
+              <button className="w-20 h-9 flex items-center justify-center rounded-xl text-white text-sm font-medium">
+                Log in
+              </button>
+            }
+          />
 
-          <Link
-            href="#"
-            className="w-20 h-9 flex items-center justify-center rounded-xl text-black text-sm font-medium bg-[linear-gradient(263deg,#10F9F1_0.3%,#2CC0F2_50.15%,#54F3A6_100%)] hover:opacity-90 transition"
-          >
-            Sign up
-          </Link>
+          {/* Signup modal */}
+          <OnboardingModal
+            defaultView="signUp"
+            trigger={
+              <button className="w-20 h-9 flex items-center justify-center rounded-xl text-black text-sm font-medium bg-[linear-gradient(263deg,#10F9F1_0.3%,#2CC0F2_50.15%,#54F3A6_100%)]">
+                Sign up
+              </button>
+            }
+          />
         </div>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white z-40"
           onClick={() => setOpen(!open)}
         >
-          {open ? <X size={28} /> : <Menu size={28} />}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile menu panel */}
+      {/* Mobile full-screen menu */}
       {open && (
-        <div className="md:hidden bg-black border-t border-gray-800">
-          <nav className="flex flex-col items-center gap-6 py-6 text-gray-300">
+        <div className="fixed inset-0 bg-black z-20 md:hidden flex flex-col">
+          
+          {/* Top bar */}
+          <div className="flex items-center justify-between px-6 py-4 border-b border-gray-800">
+            <Image
+              src={images.icon}
+              alt="CloudThinker Logo"
+              width={160}
+              height={36}
+            />
+
+            <button onClick={() => setOpen(false)} className="text-white">
+              {/* <X size={24} /> */}
+            </button>
+          </div>
+
+          {/* Menu content */}
+          <nav className="flex flex-col items-center justify-center gap-8 flex-1 text-gray-300 text-lg">
             <Link href="#" onClick={() => setOpen(false)}>Pricing</Link>
             <Link href="#" onClick={() => setOpen(false)}>Documents</Link>
             <Link href="#" onClick={() => setOpen(false)}>Blog</Link>
             <Link href="#" onClick={() => setOpen(false)}>Contact Us</Link>
             <Link href="#" onClick={() => setOpen(false)}>Services</Link>
 
-            <div className="flex flex-col gap-4 mt-4 w-full px-8">
-              <Link
-                href="#"
-                className="w-full h-10 flex items-center justify-center rounded-xl text-white border border-gray-700"
-              >
-                Log in
-              </Link>
+            <div className="flex flex-col gap-4 mt-6 w-full px-8">
+              
+              {/* Mobile login modal */}
+              <OnboardingModal
+                trigger={
+                  <button className="w-full h-12 flex items-center justify-center rounded-xl text-white border border-gray-700">
+                    Log in
+                  </button>
+                }
+              />
 
-              <Link
-                href="#"
-                className="w-full h-10 flex items-center justify-center rounded-xl text-black font-medium bg-[linear-gradient(263deg,#10F9F1_0.3%,#2CC0F2_50.15%,#54F3A6_100%)]"
-              >
-                Sign up
-              </Link>
+              {/* Mobile signup modal */}
+              <OnboardingModal
+                defaultView="signUp"
+                trigger={
+                  <button className="w-full h-12 flex items-center justify-center rounded-xl text-black font-medium bg-[linear-gradient(263deg,#10F9F1_0.3%,#2CC0F2_50.15%,#54F3A6_100%)]">
+                    Sign up
+                  </button>
+                }
+              />
             </div>
           </nav>
         </div>
