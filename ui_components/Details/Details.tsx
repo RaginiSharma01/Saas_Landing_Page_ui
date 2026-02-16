@@ -28,7 +28,6 @@ export default function Details() {
   const blogs = [
     {
       image: images.bg_card,
-      
     },
     {
       image: images.bg2_card,
@@ -42,7 +41,7 @@ export default function Details() {
     <section className="bg-black text-white px-6 py-20">
       <div className="max-w-6xl mx-auto">
 
-        {/* Why Choose Section */}
+        
         <h2 className="text-center text-3xl font-semibold mb-12">
           Why Choose CloudThinker?
         </h2>
@@ -71,7 +70,7 @@ export default function Details() {
           ))}
         </div>
 
-        {/* Trending Blogs header */}
+        
         <div className="flex items-center justify-between mb-8">
           <div>
             <h3 className="text-2xl font-semibold">
@@ -82,19 +81,14 @@ export default function Details() {
             </p>
           </div>
 
-          <button
-  className="text-black px-4 py-2 rounded-full text-sm font-medium transition hover:opacity-90"
-  style={{
-    background:
-      "linear-gradient(263deg, #10F9F1 0.3%, #2CC0F2 50.15%, #54F3A6 100%)",
-  }}
->
-  View all blogs
-</button>
+          <button className="text-black px-4 py-2 rounded-full text-sm font-medium transition hover:opacity-90"
+                style={{background:"linear-gradient(263deg, #10F9F1 0.3%, #2CC0F2 50.15%, #54F3A6 100%)",}}>
+                View all blogs
+            </button>
 
-                  </div>
+            </div>
 
-        {/* Blog Cards */}
+       
         <div className="grid md:grid-cols-3 gap-6 mb-20">
           {blogs.map((blog, i) => (
             <div
@@ -114,7 +108,7 @@ export default function Details() {
           ))}
         </div>
 
-        {/* CTA */}
+       
         <div className="text-center">
           <h3 className="text-2xl font-semibold mb-3">
             Ready to run a leaner, smarter cloud operation?
@@ -124,12 +118,8 @@ export default function Details() {
           </p>
 
           <div className="flex justify-center gap-4">
-            <button
-  className="text-black px-6 py-2 rounded-full font-medium transition hover:opacity-90"
-  style={{
-    background:
-      "linear-gradient(263deg, #10F9F1 0.3%, #2CC0F2 50.15%, #54F3A6 100%)",
-  }}
+            <button className="text-black px-6 py-2 rounded-full font-medium transition hover:opacity-90"style={{background:"linear-gradient(263deg, #10F9F1 0.3%, #2CC0F2 50.15%, #54F3A6 100%)",
+}}
 >
   Book a demo
 </button>

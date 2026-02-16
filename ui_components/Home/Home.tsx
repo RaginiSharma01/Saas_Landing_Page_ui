@@ -6,10 +6,18 @@ import HomeCTA from "./HomeCTA";
 
 export default function Home() {
   return (
-    <main className="bg-black min-h-screen px-20 py-2">
+    <main className="bg-black min-h-screen px-4 md:px-20 py-2">
       
       {/* Hero section */}
-      <section className="relative w-full h-180 overflow-hidden rounded-xl">
+      <section
+        className="
+          relative w-full
+          h-180        
+          md:h-180    
+          overflow-hidden
+          rounded-xl
+        "
+      >
         <Image
           src={images.home_bg}
           alt="Background"
@@ -18,15 +26,12 @@ export default function Home() {
           priority
         />
 
-        {/* Centered content */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center gap-10 px-6">
+        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center gap-8 md:gap-10 px-6">
           <HomeBanner />
           <ChatInput />
           <HomeCTA />
         </div>
       </section>
-
- 
     </main>
   );
 }
