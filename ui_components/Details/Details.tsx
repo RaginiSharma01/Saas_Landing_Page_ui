@@ -81,9 +81,9 @@ export default function Details() {
             </p>
           </div>
 
-          <button className="text-black px-4 py-2 rounded-full text-sm font-medium transition hover:opacity-90"
+          <button className="flex text-black px-4 py-2 rounded-full text-sm font-medium transition hover:opacity-90"
                 style={{background:"linear-gradient(263deg, #10F9F1 0.3%, #2CC0F2 50.15%, #54F3A6 100%)",}}>
-                View all blogs
+                View all 
             </button>
 
             </div>
