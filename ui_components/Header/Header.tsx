@@ -6,9 +6,13 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { images } from "@/utils/index";
 import OnboardingModal from "@/shared/OnboardingModal";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+
+  const pathname = usePathname();
+  const isDashboard = pathname.startsWith("/dashboard");
 
   return (
     <header className="w-full bg-black border-b border-gray-800 fixed z-30">
@@ -34,28 +38,29 @@ export default function Header() {
           <Link href="#" className="hover:text-white">Services</Link>
         </nav>
 
-        {/* Desktop buttons */}
-        <div className="hidden md:flex items-center gap-4">
-          
-          {/* Login modal */}
-          <OnboardingModal
-            trigger={
-              <button className="w-20 h-9 flex items-center justify-center rounded-xl text-white text-sm font-medium">
-                Log in
-              </button>
-            }
-          />
+        {/* Desktop auth buttons (hidden on dashboard) */}
+        {!isDashboard && (
+          <div className="hidden md:flex items-center gap-4">
+            {/* Login modal */}
+            <OnboardingModal
+              trigger={
+                <button className="w-20 h-9 flex items-center justify-center rounded-xl text-white text-sm font-medium">
+                  Log in
+                </button>
+              }
+            />
 
-          {/* Signup modal */}
-          <OnboardingModal
-            defaultView="signUp"
-            trigger={
-              <button className="w-20 h-9 flex items-center justify-center rounded-xl text-black text-sm font-medium bg-[linear-gradient(263deg,#10F9F1_0.3%,#2CC0F2_50.15%,#54F3A6_100%)]">
-                Sign up
-              </button>
-            }
-          />
-        </div>
+            {/* Signup modal */}
+            <OnboardingModal
+              defaultView="signUp"
+              trigger={
+                <button className="w-20 h-9 flex items-center justify-center rounded-xl text-black text-sm font-medium bg-[linear-gradient(263deg,#10F9F1_0.3%,#2CC0F2_50.15%,#54F3A6_100%)]">
+                  Sign up
+                </button>
+              }
+            />
+          </div>
+        )}
 
         {/* Mobile menu button */}
         <button
@@ -92,27 +97,27 @@ export default function Header() {
             <Link href="#" onClick={() => setOpen(false)}>Contact Us</Link>
             <Link href="#" onClick={() => setOpen(false)}>Services</Link>
 
-            <div className="flex flex-col gap-4 mt-6 w-full px-8">
-              
-              {/* Mobile login modal */}
-              <OnboardingModal
-                trigger={
-                  <button className="w-full h-12 flex items-center justify-center rounded-xl text-white border border-gray-700">
-                    Log in
-                  </button>
-                }
-              />
+            {/* Mobile auth buttons (hidden on dashboard) */}
+            {!isDashboard && (
+              <div className="flex flex-col gap-4 mt-6 w-full px-8">
+                <OnboardingModal
+                  trigger={
+                    <button className="w-full h-12 flex items-center justify-center rounded-xl text-white border border-gray-700">
+                      Log in
+                    </button>
+                  }
+                />
 
-              {/* Mobile signup modal */}
-              <OnboardingModal
-                defaultView="signUp"
-                trigger={
-                  <button className="w-full h-12 flex items-center justify-center rounded-xl text-black font-medium bg-[linear-gradient(263deg,#10F9F1_0.3%,#2CC0F2_50.15%,#54F3A6_100%)]">
-                    Sign up
-                  </button>
-                }
-              />
-            </div>
+                <OnboardingModal
+                  defaultView="signUp"
+                  trigger={
+                    <button className="w-full h-12 flex items-center justify-center rounded-xl text-black font-medium bg-[linear-gradient(263deg,#10F9F1_0.3%,#2CC0F2_50.15%,#54F3A6_100%)]">
+                      Sign up
+                    </button>
+                  }
+                />
+              </div>
+            )}
           </nav>
         </div>
       )}

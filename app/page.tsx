@@ -14,6 +14,7 @@ export default function Pages(){
     <WorkDemo/>
     <Details/>
     <Footer/>
+   
     
     </>
       

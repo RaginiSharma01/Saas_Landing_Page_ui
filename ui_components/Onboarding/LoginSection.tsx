@@ -3,6 +3,7 @@
 import React, { useActionState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 interface ILoginSection {
   setOnboardingView: (view: "login" | "signUp") => void;
@@ -46,18 +47,21 @@ const LoginSection = ({ setOnboardingView }: ILoginSection) => {
     {}
   );
 
- 
+  const router = useRouter();
+
   useEffect(() => {
     if (state?.success) {
       toast.success("Login successful!");
+      router.push("/dashboard");
     }
+
     if (state?.error) {
       toast.error(state.error);
     }
-  }, [state]);
+  }, [state, router]);
 
   return (
-    <div className="w-full flex flex-col gap-6 ">
+    <div className="w-full flex flex-col gap-6">
       <div className="text-center">
         <h2 className="text-xl font-semibold text-white">
           Login to your account
