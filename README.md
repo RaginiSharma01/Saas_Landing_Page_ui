@@ -1,4 +1,2 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> a130112 ( api calls)
+# Saas ui landing page ui
+# Part of internship, learning phase projects
